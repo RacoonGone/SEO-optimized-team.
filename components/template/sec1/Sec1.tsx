@@ -2,6 +2,8 @@
 
 import './Sec1.css';
 import {useEffect, useRef} from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // import images here
 // import sec1Background from './assets/sec1-background.png';
@@ -12,8 +14,8 @@ const textData = {
     desc: ""
   },
   mb: {
-    title: "",
-    desc: "This is section 1 MB"
+    title: "This is section 1 MB",
+    desc: ""
   }
 }
 
@@ -51,10 +53,14 @@ export default function Sec1() {
     <section ref={ServiceOverviewSec1Ref} className='main-section section-1'>
       <div className="wrap-container">
         <div className='content-pc'>
-          <h1>{textData.pc.title}</h1>
+          <div className="content-container">
+            <h1>{textData.pc.title}</h1>
+          </div>
         </div>
         <div className='content-mb'>
-          <h1>{textData.mb.title}</h1>
+          <div className="content-container">
+            <h1>{textData.mb.title}</h1>
+          </div>
         </div>
       </div>
     </section>
