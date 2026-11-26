@@ -65,6 +65,9 @@ export default function Navbar() {
                             ))}
                             <div className="navbar-cta"><span>Get Access</span></div>
                         </div>
+                        <div className="m-nav-button">
+                            <img className="m-nav-button-image" src="/menu-button.png"/>
+                        </div>
                     </nav>
                 </div>
             </div>

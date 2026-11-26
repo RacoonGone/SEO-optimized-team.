@@ -3,152 +3,233 @@
     background: #232340;
     color: #f5f5f5;
     margin-top: 11.3889vw;
-}
 
-.footer-content-container {
-    display: flex;
-    width: 100%;
-}
+    .footer-content-container {
+        display: flex;
+        width: 100%;
+    }
 
-.footer-center-container {
-    display: flex;
-    width: 100%;
-    min-height: 32.5vw;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 0 9.7222vw;
-    padding: 6.5972vw 0 2.5694vw;
-}
+    .footer-center-container {
+        display: flex;
+        width: 100%;
+        min-height: 32.5vw;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0 9.7222vw;
+        padding: 6.5972vw 0 2.5694vw;
+    }
 
-.footer-main {
-    display: flex;
+    .footer-main {
+        display: flex;
 
-}
+    }
 
-.footer-brand, .footer-column, .footer-newsletter {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
+    .footer-brand, .footer-column, .footer-newsletter {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-.footer-logo {
-    color: #f5f5f5;
-    font-family: "Lexend Deca", sans-serif;
-    font-size: 3.4722vw;
-    font-weight: 600;
-    letter-spacing: -0.0722vw;
-    line-height: 100%;
-    text-decoration: none;
-    margin: -1.5278vw 9.0278vw 0 0;
-}
+    .footer-logo {
+        color: #f5f5f5;
+        font-family: "Lexend Deca", sans-serif;
+        font-size: 3.4722vw;
+        font-weight: 600;
+        letter-spacing: -0.0722vw;
+        line-height: 100%;
+        text-decoration: none;
+        margin: -1.5278vw 9.0278vw 0 0;
+    }
 
-.footer-logo span {
-    color: #5468e7;
-    font-size: 3.6111vw;
-    font-weight: 600;
-    letter-spacing: -0.0722vw;
-    line-height: 100%;
-    text-decoration: none;
-}
+    .footer-logo span {
+        color: #5468e7;
+        font-size: 3.6111vw;
+        font-weight: 600;
+        letter-spacing: -0.0722vw;
+        line-height: 100%;
+        text-decoration: none;
+    }
 
-.footer-brand p, .footer-column li, .footer-newsletter label {
-    color: #f5f5f5;
-    font-family: "Lexend Deca", sans-serif;
-    font-size: 0.6944vw;
-    font-weight: 400;
-    line-height: 1.5;
-}
+    .footer-brand p, .footer-column li, .footer-newsletter label {
+        color: #f5f5f5;
+        font-family: "Lexend Deca", sans-serif;
+        font-size: 0.6944vw;
+        font-weight: 400;
+        line-height: 1.5;
+    }
 
-.footer-brand p {
-    font-size: 0.9722vw;
-    margin-top: 0.8333vw;
-}
+    .footer-brand p {
+        font-size: 0.9722vw;
+        margin-top: 0.8333vw;
+    }
 
-.footer-company{
-    margin-right: 5.9028vw;
-}
-.footer-features{
-    margin-right: 4.3750vw;
-}
-.footer-contact{
-    margin-right: 4.2361vw;
-}
-.footer-column h2, .footer-newsletter h2 {
-    margin: 0 0 0.8333vw;
-    color: #5468e7;
-    font-family: "Lexend Deca", sans-serif;
-    font-size: 1.6667vw;
-    font-weight: 500;
-    line-height: 1.5;
-}
+    .footer-company{
+        margin-right: 5.9028vw;
+    }
+    .footer-features{
+        margin-right: 4.3750vw;
+    }
+    .footer-contact{
+        margin-right: 4.2361vw;
+    }
+    .footer-column h2, .footer-newsletter h2 {
+        margin: 0 0 0.8333vw;
+        color: #5468e7;
+        font-family: "Lexend Deca", sans-serif;
+        font-size: 1.6667vw;
+        font-weight: 500;
+        line-height: 1.5;
+    }
 
-.footer-column ul {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8333vw;
-    list-style: none;
-}
-.footer-column li{
-    font-size: 0.9722vw;
-}
+    .footer-column ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8333vw;
+        list-style: none;
+    }
+    .footer-column li{
+        font-size: 0.9722vw;
+    }
 
-.footer-column a {
-    color: inherit;
-    text-decoration: none;
-}
+    .footer-column a {
+        color: inherit;
+        text-decoration: none;
+    }
 
-.footer-newsletter label {
-    margin-bottom: 0.5556vw;
-}
+    .footer-newsletter label {
+        margin-bottom: 0.5556vw;
+    }
 
-.footer-email-control {
-    display: flex;
-    width: 16.3889vw;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.7639vw 1.1111vw;
-    border-radius: 0.2778vw;
-    background: rgba(245, 245, 245, 0.24);
-}
-.footer-text{
-    font-size: 0.9722vw;
-    margin-bottom: 0.6944vw;
-}
-.footer-email-control input {
-    width: 100%;
-    border: 0;
-    outline: 0;
-    background: transparent;
-    color: #f5f5f5;
-    font: inherit;
-    font-size: 0.9722vw;
-}
+    .footer-email-control {
+        display: flex;
+        width: 16.3889vw;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.7639vw 1.1111vw;
+        border-radius: 0.2778vw;
+        background: rgba(245, 245, 245, 0.24);
+    }
+    .footer-text{
+        font-size: 0.9722vw;
+        margin-bottom: 0.6944vw;
+    }
+    .footer-email-control input {
+        width: 100%;
+        border: 0;
+        outline: 0;
+        background: transparent;
+        color: #f5f5f5;
+        font: inherit;
+        font-size: 0.9722vw;
+    }
 
-.footer-email-control input::placeholder {
-    color: #f5f5f5;
-}
+    .footer-email-control input::placeholder {
+        color: #f5f5f5;
+    }
 
-.footer-email-control button {
-    display: grid;
-    flex: 0 0 auto;
-    width: 1.25vw;
-    height: 1.25vw;
-    place-items: center;
-    padding: 0;
-    border: 0;
-    background: transparent;
-    cursor: pointer;
-}
+    .footer-email-control button {
+        display: grid;
+        flex: 0 0 auto;
+        width: 1.25vw;
+        height: 1.25vw;
+        place-items: center;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+    }
 
-.footer-email-control img {
-    width: 100%;
-    height: 100%;
-    filter: brightness(0) invert(1);
-}
+    .footer-email-control img {
+        width: 100%;
+        height: 100%;
+        filter: brightness(0) invert(1);
+    }
 
-.footer-bottom small {
-    color: #f5f5f5;
-    font-family: "Lexend Deca", sans-serif;
-    font-size: 0.9722vw;
-}
+    .footer-bottom small {
+        color: #f5f5f5;
+        font-family: "Lexend Deca", sans-serif;
+        font-size: 0.9722vw;
+    }
+    @media (max-width: 1199px) {
+        .footer-center-container {
+            margin: 0 6vw;
+            padding: 6vw 0 4vw;
+            min-height: auto;
+            gap: 8vw;
+        }
 
+        .footer-main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 8vw;
+        }
+
+        .footer-brand {
+            grid-column: 1 / -1;
+        }
+
+        .footer-logo {
+            font-size: 8.8028vw;
+            margin: 0;
+        }
+
+        .footer-logo span {
+            font-size: 8.8028vw;
+        }
+
+        .footer-brand p {
+            font-size: 2.4648vw;
+            margin-top: 1.5vw;
+        }
+
+        .footer-company, .footer-features, .footer-contact {
+            margin-right: 0;
+        }
+
+        .footer-column h2, .footer-newsletter h2 {
+            font-size: 4.2254vw;
+            margin-bottom: 1.5vw;
+        }
+
+        .footer-column ul {
+            gap: 1.5vw;
+            padding: 0;
+        }
+
+        .footer-column li {
+            font-size: 1.5vw;
+        }
+
+        .footer-newsletter {
+            grid-column: 1 / -1;
+        }
+
+        .footer-newsletter label {
+            font-size: 1.5vw;
+        }
+
+        .footer-text {
+            font-size: 1.5vw;
+            margin-bottom: 1.5vw;
+        }
+
+        .footer-email-control {
+            width: 40vw;
+            padding: 1.5vw 2vw;
+            border-radius: 0.8vw;
+        }
+
+        .footer-email-control input {
+            font-size: 1.5vw;
+        }
+
+        .footer-email-control button {
+            width: 2vw;
+            height: 2vw;
+        }
+
+        .footer-bottom small {
+            font-size: 1.5vw;
+        }
+    }
+}

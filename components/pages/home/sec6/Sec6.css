@@ -8,7 +8,7 @@ section.section-6 {
   .wrap-container {
     width: 100%;
     height: 100%;
-    padding: min(5vw, 5vh) min(17.5vw, 17.5vh);
+    padding: 5vw 17.5vw;
     display: flex;
     align-items: center;
   }
@@ -28,7 +28,7 @@ section.section-6 {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: min(8vw, 8vh);
+    gap: 8vw;
   }
 
   .title-sec6 {
@@ -52,8 +52,8 @@ section.section-6 {
   }
 
   .swiper-slide {
-    width: auto;
-    height: auto;
+    width: 17vw;
+    height: 30vw;
   }
 
   .review-image {
@@ -76,7 +76,7 @@ section.section-6 {
     border: 0;
     padding: 0.2778vw;
     color: #756ce1;
-    font-size: min(2.5vw, 2.5vh);
+    font-size: 2.5vw;
     cursor: pointer;
   }
 
@@ -87,23 +87,51 @@ section.section-6 {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
   section.section-6 {
+    height: auto;
+    min-height: 100vh;
+    overflow: hidden;
+
     .wrap-container {
-      padding: 6vw;
+      height: auto;
+      min-height: 100vh;
+      padding: 6vw 0;
+    }
+
+    .content-container6 {
+      height: auto;
+      min-height: 100%;
     }
 
     .center-container6 {
-      gap: 8vw;
+      gap: 14.0845vw;
     }
 
     .title-sec6 {
-      font-size: 6vw;
+      font-size: 8vw;
+      line-height: 1.25;
+      margin-bottom: 0;
+      width: 75vw;
     }
 
     .swiper-nav {
       width: 6vw;
       height: 6vw;
+    }
+
+    .swiper-slide {
+      height: auto;
+      align-self: flex-start;
+    }
+
+    .review-image {
+      transform: scale(1.12);
+    }
+
+    .swiper-navigations {
+      justify-content: center;
+      gap: 4vw;
     }
   }
 }

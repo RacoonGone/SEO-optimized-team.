@@ -16,8 +16,8 @@
 
 .site-header.is-scrolled .navbar-content-container {
     background-color: rgba(0, 0, 0, 0.3);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
 }
 
 .navbar-center-container {
@@ -86,4 +86,34 @@
     font-weight: 400;
     line-height: 1.875vw;
 }
+.m-nav-button{
+    display: none;
+}
 
+@media (max-width: 1199px) {
+    .navbar-links{
+        display: none;
+    }
+    .navbar-center-container {
+        width: 100%;
+        margin: 7.0423vw 5.2817vw 0;
+    }
+    .navbar-logo{
+        font-size: 8.8028vw;
+    }
+    .navbar-logo span{
+        font-size: 8.8028vw;
+    }
+    .m-nav-button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .m-nav-button-image{
+        width: 3.1690vw;
+        height: 2.1127vw;
+    }
+}
+@media (max-width: 767px) {
+
+}
