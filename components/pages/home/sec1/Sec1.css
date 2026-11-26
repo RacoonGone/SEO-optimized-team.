@@ -4,49 +4,104 @@ section.section-1 {
   overflow: hidden;
   margin-top: unset !important;
 
-  @media screen and (max-width: 720px), screen and (orientation: portrait) {
-    justify-content: unset;
-    height: unset;
-    min-height: unset;
+  .content-container{
+    display: flex;
+    position: relative;
+    isolation: isolate;
+    height: 100vh;
+  }
+  .content-container1::before{
+    position: absolute;
+    content: "";
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(90deg, #232340 0%, rgb(30 30 66 / 1) 10%, rgb(22 22 40 / 0.37) 52%, rgba(0, 0, 0, 0.02) 68%), radial-gradient(35.82% 25.27% at 85.43% 4.19%, rgba(0, 0, 0, 0.28) 16.15%, rgba(0, 0, 0, 0.00) 84.53%), radial-gradient(26.75% 26.3% at 69.9% -0.97%, rgba(0, 0, 0, 0.28) 15.16%, rgba(0, 0, 0, 0.00) 79.3%), radial-gradient(33.92% 29.06% at 63.41% -3.63%, rgba(0, 0, 0, 0.28) 22.94%, rgba(0, 0, 0, 0.00) 84.89%), radial-gradient(48.8% 31.27% at 53.79% 2.3%, rgba(0, 0, 0, 0.28) 15.16%, rgba(0, 0, 0, 0.00) 84.82%);
+  }
+  .hero-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    z-index: -2;
+  }
+  .center-container1{
+    position: relative;
+    z-index: 1;
+    padding: 0 9.7222vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hero-text-container{
+    color: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    width: 39.0972vw;
+  }
+  .hero-title{
+    font-family: "Lexend Deca";
+    font-weight: 700;
+    font-size: 3.4722vw;
+    line-height: 4.4444vw;
+  }
+  .hero-desc{
+    font-size: 1.25vw;
+    width: 27.5694vw;
+    padding-top: 1.1111vw;
+  }
 
-    .warp-container {
-      width: 100%;
-      height: 100%
-    }
-
-    .content-mb {
-      @media screen and (max-width: 720px), screen and (orientation: portrait) {
-        .content-container {
-          width: 100vw;
-          height: 100vh;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          h1 {
-            font-size: 2vw;
-            color: black;
-          }
-        }
-      }
-    }
-
-    .content-pc {
-      width: 100vw;
-      display: flex;
-      justify-content: center;
-      .content-container {
-        width: 100vw;
-        height: 56.25vw;
-        max-width: 1920px;
-        max-height: 1080px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        h1 {
-          font-size: 2vw;
-          color: black
-        }
-      }
-    }
+  .hero-inputs{
+    padding-top: 3.8889vw;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.1111vw;
+    align-self: stretch;
+  }
+  .hero-input{
+    display: flex;
+    width: 20.6944vw;
+    height: 3.2639vw;
+    padding: 0.7639vw 1.1111vw;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    background-color: #F5F5F5;
+    border-radius: 0.2778vw;
+    border: 0.1389vw solid #D1ECFD;
+  }
+  .hero-input-placeholder{
+    width: 2.7083vw;
+    color: #7676B2;
+    font-family: "Lexend Deca";
+    font-size: 0.9722vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5556vw;
+    letter-spacing: 0.0097vw;
+  }
+  .hero-input-arrow{
+    width: 1.6667vw;
+    height: 1.6667vw;
+    padding: 0.3063vw;
+  }
+  .hero-button{
+    display: flex;
+    padding: 0.6944vw 3.0556vw;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5556vw;
+    border-radius: 0.2778vw;
+    background: #5468E7;
+  }
+  .hero-button-text{
+    color: #F5F5F5;
+    text-align: center;
+    font-family: "Lexend Deca";
+    font-size: 1.25vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.875vw
   }
 }

@@ -1,0 +1,108 @@
+section.section-2 {
+  width: 100vw;
+  height: unset;
+  overflow: hidden;
+  margin-top: unset !important;
+
+  .content-container{
+    display: flex;
+    position: relative;
+    isolation: isolate;
+    height: 100vh;
+    margin: 5.5556vw 0 4.1667vw 0;
+  }
+  .center-container2{
+    position: relative;
+    z-index: 1;
+    padding-left: 9.7222vw;
+    display: flex;
+    align-items: center;
+    gap: 3.8889vw;
+  }
+
+  .mock-text-container{
+    display: flex;
+    width: 31.9444vw;
+    height: 23.4722vw;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3.3333vw;
+  }
+  .mock-title{
+    align-self: stretch;
+    color: #232340;
+    font-family: "Lexend Deca";
+    font-size: 3.4722vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 4.4444vw
+  }
+  .mock-desc{
+    align-self: stretch;
+    color: rgba(35, 35, 64, 0.90);
+    font-family: "Lexend Deca";
+    font-size: 1.25vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.875vw;
+  }
+
+  .mock-link{
+    display: flex;
+    align-items: center;
+    gap: 0.5556vw;
+  }
+  .mock-link-text{
+    color: #5468E7;
+    font-family: "Lexend Deca";
+    font-size: 1.1111vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.6667vw;
+    text-decoration-line: underline;
+  }
+  .mock-link-action{
+    width: 2.0833vw;
+    height: 2.0833vw;
+  }
+
+  .mockup{
+    width: 56vw;
+    height: 45.4167vw;
+    position: relative;
+    transform: translateX(-3vw);
+  }
+  .task-today-img{
+    height: 19.8611vw;
+    width: auto;
+    position: absolute;
+    left: 1.6208vw;
+    top: 1.1806vw;
+  }
+  .dashboard-img{
+    height: 45.4167vw;
+    width: auto;
+    position: absolute;
+    left: 9.0972vw;
+    top: 0;
+    filter: drop-shadow(0 0.5556vw 1.6667vw rgba(118, 118, 178, 0.24));
+  }
+  .mentors-wrap{
+    position: absolute;
+    width: 20.3785vw;
+    left: 0;
+    top: 22.0833vw;
+  }
+  .mentors-img{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .send-img{
+    width: 8.5278vw;
+    height: auto;
+    position: absolute;
+    right: -4.2639vw;
+    top: -4.2639vw;
+  }
+}

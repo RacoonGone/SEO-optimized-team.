@@ -2,18 +2,22 @@
 
 import './Sec1.css';
 import {useEffect, useRef} from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 // import images here
 // import sec1Background from './assets/sec1-background.png';
 
 const textData = {
   pc: {
-    title: "This is section 1 PC",
-    desc: ""
+    title: "Instant collaboration for remote teams",
+    desc: "All-in-one place for your remote team to chat, collaborate and track project progress."
   },
   mb: {
-    title: "",
-    desc: "This is section 1 MB"
+    title: "Instant collaboration for remote teams",
+    desc: "All-in-one place for your remote team to chat, collaborate and track project progress."
   }
 }
 
@@ -50,11 +54,25 @@ export default function Sec1() {
   return (
     <section ref={ServiceOverviewSec1Ref} className='main-section section-1'>
       <div className="wrap-container">
-        <div className='content-pc'>
-          <h1>{textData.pc.title}</h1>
-        </div>
-        <div className='content-mb'>
-          <h1>{textData.mb.title}</h1>
+        <div className='content-container content-container1'>
+          <div className="center-container center-container1">
+            <div className="hero-offer">
+              <div className="hero-text-container">
+                <span className="hero-title">{textData.pc.title}</span>
+                <span className="hero-desc">{textData.pc.desc}</span>
+              </div>
+              <div className="hero-inputs">
+                <div className="hero-input">
+                  <span className="hero-input-placeholder">Email</span>
+                  <img className="hero-input-arrow" src="/arrow-right.svg" alt="Arrow Input"/>
+                </div>
+                <div className="hero-button">
+                  <span className="hero-button-text">Get Early Access</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <img className="hero-img" src="/hero-img.jpg" alt="Hero Background Image"/>
         </div>
       </div>
     </section>

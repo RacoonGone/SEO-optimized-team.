@@ -2,6 +2,10 @@
 
 import './Sec1.css';
 import {useEffect, useRef} from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 // import images here
 // import sec1Background from './assets/sec1-background.png';

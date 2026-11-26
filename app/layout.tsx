@@ -5,6 +5,15 @@ import "./globals.css";
 import {JsonLd} from "@/components/seo/JsonLd";
 import {organizationSchema} from "@/lib/seo/schemas";
 import SmoothScroll from "@/components/animation/SmoothScroll";
+import { Lexend_Deca } from 'next/font/google'
+import './globals.css'
+
+const lexendDeca = Lexend_Deca({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-lexend-deca',
+  display: 'swap',
+})
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -48,7 +57,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${lexendDeca.variable}`}>
       <body>
         <SmoothScroll>
           {children}
