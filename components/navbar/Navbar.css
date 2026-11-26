@@ -32,6 +32,8 @@
     width: 100%;
     min-height: 3.6111vw;
     color: #f5f5f5;
+    position: relative;
+    z-index: 3;
 }
 
 .navbar-logo {
@@ -41,6 +43,7 @@
     font-weight: 600;
     line-height: 3.4722vw;
     letter-spacing: -0.0694vw;
+    z-index: 4;
 }
 
 .navbar-logo span{
@@ -88,11 +91,37 @@
 }
 .m-nav-button{
     display: none;
+    z-index: 4;
+}
+.m-nav-menu {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    position: absolute;
+    top: 0;
+    left: -10%;
+    width: 120%;
+    height: 20vh;
+    box-sizing: border-box;
+    z-index: 2;
+    border-radius: min(3.125vh, 5.556vw);
+    transform: scale(.94);
+    align-items: center;
+    transition: top 0.5s ease, width 0.5s ease;
 }
 
 @media (max-width: 1199px) {
+    .navbar{
+        transition: transform 0.3s ease;
+    }
     .navbar-links{
         display: none;
+    }
+    .site-header.is-scrolled .navbar-content-container.menu-open {
+        background-color: rgba(0, 0, 0, 0);
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
     }
     .navbar-center-container {
         width: 100%;
@@ -113,7 +142,50 @@
         width: 3.1690vw;
         height: 2.1127vw;
     }
+    .m-nav-menu {
+        display: flex;
+        flex-direction: column;
+        top: -2vw;
+        left: -5%;
+        width: 110%;
+        height: 35vh;
+        box-sizing: border-box;
+        padding-top: 15vw;
+        gap: min(1.969vh, 3.5vw);
+        opacity: 0;
+        transform: translateY(-20vh) scaleX(1.35);
+        clip-path: inset(0 0 100% 0 round 5vw);
+        transition: opacity 0.5s ease, transform 0.5s ease, clip-path 0.5s ease, visibility 0s linear 0.5s;
+    }
+
+    .m-nav-menu.open {
+        opacity: 1;
+        transform: translateY(0) scaleX(1);
+        clip-path: inset(0 0 0 0 round 5vw);
+        transition: opacity 0.5s ease, transform 0.5s ease, clip-path 0.5s ease, visibility 0s;
+    }
+    .navbar.menu-open {
+        transform: translateY(-50%);
+    }
+
+    .m-nav-menu a {
+        font-family: "Lexend Deca", sans-serif;
+        font-size: min(2.5vh, 5vw);
+        line-height: 1.5;
+        font-weight: 500;
+        color: #f5f5f5;
+    }
+
 }
 @media (max-width: 767px) {
-
+    .navbar-center-container {
+        width: 100%;
+        margin: 5.2817vw 5.2817vw 0 5.2817vw;
+    }
+    .navbar-logo{
+        font-size: 8.8028vw;
+    }
+    .navbar-logo span{
+        font-size: 8.8028vw;
+    }
 }

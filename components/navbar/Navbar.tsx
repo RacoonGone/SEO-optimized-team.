@@ -16,6 +16,7 @@ const links = [
 
 export default function Navbar() {
     const navbarRef = useRef<HTMLDivElement>(null);
+    const [open, setOpen] = useState(false);
 
     useGSAP(() => {
         const navbar = navbarRef.current;
@@ -50,9 +51,9 @@ export default function Navbar() {
     }, { dependencies: [] });
     return (
         <header className="site-header" ref={navbarRef}>
-            <div className="content-container navbar-content-container">
+            <div className={`content-container navbar-content-container${open ? " menu-open" : ""}`}>
                 <div className="center-container navbar-center-container">
-                    <nav className="navbar" aria-label="Main navigation">
+                    <nav className={open ? "navbar menu-open" : "navbar"} aria-label="Main navigation">
                         <a className="navbar-logo" href="/" aria-label="Team home">
                             team<span>.</span>
                         </a>
@@ -65,8 +66,15 @@ export default function Navbar() {
                             ))}
                             <div className="navbar-cta"><span>Get Access</span></div>
                         </div>
-                        <div className="m-nav-button">
+                        <div className="m-nav-button" onClick={() => setOpen(!open)}>
                             <img className="m-nav-button-image" src="/menu-button.png"/>
+                        </div>
+                        <div className={open ? "m-nav-menu open" : "m-nav-menu"}>
+                            {links.map((link) => (
+                                <a key={link.label} href={link.href} onClick={() => setOpen(false)}>
+                                    {link.label}
+                                </a>
+                            ))}
                         </div>
                     </nav>
                 </div>

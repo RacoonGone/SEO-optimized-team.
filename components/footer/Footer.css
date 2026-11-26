@@ -197,7 +197,7 @@
         }
 
         .footer-column li {
-            font-size: 1.5vw;
+            font-size: 2.4648vw;
         }
 
         .footer-newsletter {
@@ -205,11 +205,11 @@
         }
 
         .footer-newsletter label {
-            font-size: 1.5vw;
+            font-size: 2.4648vw;
         }
 
         .footer-text {
-            font-size: 1.5vw;
+            font-size: 2.4648vw;
             margin-bottom: 1.5vw;
         }
 
@@ -220,7 +220,7 @@
         }
 
         .footer-email-control input {
-            font-size: 1.5vw;
+            font-size: 2.4648vw;
         }
 
         .footer-email-control button {
@@ -229,7 +229,7 @@
         }
 
         .footer-bottom small {
-            font-size: 1.5vw;
+            font-size: 2.4648vw;
         }
     }
 }
