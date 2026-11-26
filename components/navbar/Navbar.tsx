@@ -1,6 +1,6 @@
 "use client"
 import './Navbar.css';
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -17,6 +17,22 @@ const links = [
 export default function Navbar() {
     const navbarRef = useRef<HTMLDivElement>(null);
     const [open, setOpen] = useState(false);
+    const menuOpenRef = useRef(open);
+    menuOpenRef.current = open;
+
+    useEffect(() => {
+        if (!open) return;
+
+        const navbarContent = navbarRef.current?.querySelector<HTMLElement>(".navbar-content-container");
+        if (navbarContent) {
+            gsap.to(navbarContent, {
+                opacity: 1,
+                duration: 0.3,
+                ease: "power2.out",
+                overwrite: "auto",
+            });
+        }
+    }, [open]);
 
     useGSAP(() => {
         const navbar = navbarRef.current;
@@ -25,7 +41,7 @@ export default function Navbar() {
         const navbarContent = navbar.querySelector<HTMLElement>(".navbar-content-container");
         if (!navbarContent) return;
 
-        let hidden = window.scrollY > 80;
+        let hidden = window.scrollY > 80 && !menuOpenRef.current;
         gsap.set(navbarContent, { opacity: hidden ? 0 : 1 });
         navbar.classList.toggle("is-scrolled", window.scrollY > 0);
 
@@ -36,6 +52,19 @@ export default function Navbar() {
             },
             onUpdate: (self) => {
                 navbar.classList.toggle("is-scrolled", self.scroll() > 0);
+                if (menuOpenRef.current) {
+                    if (hidden) {
+                        hidden = false;
+                        gsap.to(navbarContent, {
+                            opacity: 1,
+                            duration: 0.3,
+                            ease: "power2.out",
+                            overwrite: "auto",
+                        });
+                    }
+                    return;
+                }
+
                 const shouldHide = self.scroll() > 80 && self.direction === 1;
                 if (shouldHide === hidden) return;
 

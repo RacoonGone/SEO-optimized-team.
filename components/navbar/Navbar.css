@@ -7,7 +7,8 @@
 .navbar-content-container {
     display: flex;
     width: 100%;
-    height: 12.5vh;
+    height: fit-content;
+    padding-bottom: 2vh;
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
     background-color: transparent;
@@ -148,7 +149,7 @@
         top: -2vw;
         left: -5%;
         width: 110%;
-        height: 35vh;
+        height: min(45vh, 45vw);
         box-sizing: border-box;
         padding-top: 15vw;
         gap: min(1.969vh, 3.5vw);
@@ -180,12 +181,37 @@
 @media (max-width: 767px) {
     .navbar-center-container {
         width: 100%;
-        margin: 5.2817vw 5.2817vw 0 5.2817vw;
+        margin: 10.3448vw 10.3448vw 0 10.3448vw;
     }
     .navbar-logo{
-        font-size: 8.8028vw;
+        font-size: 17.2414vw;
     }
     .navbar-logo span{
-        font-size: 8.8028vw;
+        font-size: 17.9310vw;
+    }
+    .m-nav-button-image{
+        width: 6.2069vw;
+        height: 4.1379vw;
+    }
+    .m-nav-menu {
+        top: -3vw;
+        left: -10%;
+        width: 120%;
+        height: min(45vh, 80vw);
+        padding-top: 27.5vw;
+        gap: min(2vh, 4vw);
+        transform: translateY(-20vh) scaleX(1.35);
+    }
+
+    .m-nav-menu.open {
+        opacity: 1;
+        transform: translateY(0) scaleX(1);
+    }
+    .navbar.menu-open {
+        transform: translateY(-30%);
+    }
+
+    .m-nav-menu a {
+        font-size: min(2.5vh, 6vw);
     }
 }

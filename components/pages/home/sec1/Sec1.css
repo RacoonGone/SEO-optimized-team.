@@ -160,6 +160,64 @@ section.section-1 {
     }
   }
   @media (max-width: 767px) {
+    .hero-img{
+      object-position: 70%;
+      transform: scale(1.1);
+    }
+    .center-container1{
+      padding: 0 10.3448vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      margin-bottom: 25vw;
+    }
 
+    .hero-text-container{
+      width: 100%;
+    }
+    .hero-title{
+      font-size: 11.7241vw;
+      line-height: 14.4828vw;
+    }
+    .hero-desc{
+      font-size: 5.5172vw;
+      width: 100%;
+      line-height: 8.2759vw;
+      padding-top: 4.7535vw;
+    }
+
+    .hero-inputs{
+      padding-top: 9.8592vw;
+      gap: 5.5172vw;
+      flex-direction: column;
+    }
+    .hero-input{
+      width: 100%;
+      height: auto;
+      padding: 3.7931vw 5.5172vw;
+      border-radius: 0.7042vw;
+      border: 0.3521vw solid #D1ECFD;
+    }
+    .hero-input-placeholder{
+      font-size: 4.8276vw;
+    }
+    .hero-input-arrow{
+      width: 8.2759vw;
+      height: 8.2759vw;
+      padding: 1.5207vw;
+    }
+    .hero-button{
+      width: 100%;
+      height: auto;
+      padding: 3.4483vw 15.1724vw;
+      border-radius: 0.7042vw;
+    }
+    .hero-button-text{
+      font-size: 6.2069vw;
+      white-space: nowrap;
+      height: 9.3103vw;
+      display: flex;
+      align-items: center;
+    }
   }
 }
