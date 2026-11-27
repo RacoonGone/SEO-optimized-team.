@@ -135,3 +135,43 @@ section.section-6 {
     }
   }
 }
+
+@media (max-width: 767px) {
+  section.section-6 {
+    .wrap-container {
+      min-height: auto;
+      padding: 18.75vw 0;
+    }
+
+    .content-container6 {
+      min-height: auto;
+    }
+
+    .center-container6 {
+      gap: 12.5vw;
+    }
+
+    .title-sec6 {
+      width: 81.25vw;
+      font-size: 10.625vw;
+      line-height: 1.25;
+    }
+
+    .swiper-slide {
+      width: 81.25vw;
+    }
+
+    .review-image {
+      transform: none;
+    }
+
+    .swiper-nav {
+      width: 9.375vw;
+      height: 9.375vw;
+    }
+
+    .swiper-navigations {
+      gap: 6.25vw;
+    }
+  }
+}

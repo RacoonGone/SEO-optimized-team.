@@ -13,14 +13,22 @@ export default function Sec6() {
   const swiperRef = useRef<SwiperInstance | null>(null);
   const ServiceOverviewSec6Ref:any = useRef<HTMLElement>(null);
   const [isCompact, setIsCompact] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 1199px)");
+    const mobileQuery = window.matchMedia("(max-width: 767px)");
     const updateLayout = () => setIsCompact(mediaQuery.matches);
+    const updateMobileLayout = () => setIsMobile(mobileQuery.matches);
 
     updateLayout();
+    updateMobileLayout();
     mediaQuery.addEventListener("change", updateLayout);
-    return () => mediaQuery.removeEventListener("change", updateLayout);
+    mobileQuery.addEventListener("change", updateMobileLayout);
+    return () => {
+      mediaQuery.removeEventListener("change", updateLayout);
+      mobileQuery.removeEventListener("change", updateMobileLayout);
+    };
   }, []);
 
   useEffect(() => {
@@ -56,11 +64,11 @@ export default function Sec6() {
             <span className="title-sec6">What people say about Team</span>
             <Swiper
               className="swiper6"
-              slidesPerView={isCompact ? 2 : 2}
+              slidesPerView={isMobile ? 1 : 2}
               slidesPerGroup={1}
-              spaceBetween={isCompact ? 8 : 28}
-              slidesOffsetBefore={isCompact ? 8 : 0}
-              slidesOffsetAfter={isCompact ? 8 : 0}
+              spaceBetween={isMobile ? 16 : isCompact ? 8 : 28}
+              slidesOffsetBefore={isMobile ? 24 : isCompact ? 8 : 0}
+              slidesOffsetAfter={isMobile ? 24 : isCompact ? 8 : 0}
               speed={800}
               onSwiper={(swiper) => {swiperRef.current = swiper;}}
             >

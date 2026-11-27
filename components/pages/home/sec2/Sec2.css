@@ -102,8 +102,8 @@ section.section-2 {
     width: 8.5278vw;
     height: auto;
     position: absolute;
-    right: -4.2639;
-    top: -4.2639;
+    right: -4.2639vw;
+    top: -4.2639vw;
   }
   @media (max-width: 1199px) {
     .content-container{
@@ -189,11 +189,57 @@ section.section-2 {
       height: auto;
       max-width: none;
       position: absolute;
-      right: -4.2639;
-      top: -4.2639;
+      right: -4.2639vw;
+      top: -4.2639vw;
     }
   }
   @media (max-width: 767px) {
+    .content-container{
+      height: auto;
+      margin: 5vw 0 21.8310vw 0;
+    }
+    .center-container2{
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 8vw;
+      padding-left: 0;
+    }
+
+    .mock-offer{
+      width: 100%;
+    }
+    .mock-text-container{
+      width: 100%;
+      height: auto;
+      gap: 4.2254vw;
+      padding: 0 9.3750vw;
+    }
+    .mock-title{
+      font-size: 10.625vw;
+      line-height: 13.125vw;
+    }
+    .mock-desc{
+      font-size: 5vw;
+      line-height: 7.5vw;
+    }
+
+    .mock-link{
+      display: flex;
+      align-items: center;
+      gap: 2.5vw;
+      padding: 0 9.3750vw;
+      margin-top: 15vw;
+    }
+    .mock-link-text{
+      font-size: 5vw;
+    }
+    .mock-link-action{
+      width: 9.3750vw;
+      height: 9.3750vw;
+    }
+
     .mockup{
       width: 100%;
       height: 200vw;
@@ -228,12 +274,12 @@ section.section-2 {
       height: auto;
     }
     .mentors-wrap .send-img{
-      width: 15vw;
+      width: 30vw;
       height: auto;
       max-width: none;
       position: absolute;
-      right: -4.2639;
-      top: -4.2639;
+      right: 20vw;
+      top: -7.5vw;
     }
   }
 }

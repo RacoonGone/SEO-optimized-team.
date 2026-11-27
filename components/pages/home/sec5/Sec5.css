@@ -159,4 +159,73 @@ section.section-5 {
       height: 16.72vw;
     }
   }
+
+  @media (max-width: 767px) {
+    .content-container {
+      height: auto;
+      margin: 5vw 0 21.831vw;
+    }
+
+    .center-container5 {
+      width: 100%;
+      flex-direction: column-reverse;
+      align-items: start;
+      justify-content: flex-start;
+      gap: 8vw;
+    }
+
+    .info-offer,
+    .info-text-container {
+      width: 100%;
+    }
+
+    .info-text-container {
+      height: auto;
+      gap: 4.2254vw;
+      padding: 0 9.375vw;
+    }
+
+    .info-title {
+      font-size: 10.625vw;
+      line-height: 1.2353;
+    }
+
+    .info-desc {
+      font-size: 5vw;
+      line-height: 1.5;
+    }
+
+    .info-link {
+      gap: 2.5vw;
+      padding: 0 9.375vw;
+      margin-top: 15vw;
+    }
+
+    .info-link-text {
+      font-size: 5vw;
+      line-height: 1.5;
+    }
+
+    .info-link-action {
+      width: 9.375vw;
+      height: 9.375vw;
+    }
+
+    .info-image-container {
+      flex: 0 0 auto;
+      width: 90vw;
+      height: 100vw;
+    }
+
+    .image-inner-container {
+      gap: 2vw;
+      margin: 4vw;
+    }
+
+    .image-inner1,
+    .image-inner2 {
+      width: 35vw;
+      height: auto;
+    }
+  }
 }

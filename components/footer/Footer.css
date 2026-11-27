@@ -165,7 +165,7 @@
         }
 
         .footer-brand {
-            grid-column: 1 / -1;
+            order: 0;
         }
 
         .footer-logo {
@@ -201,8 +201,13 @@
         }
 
         .footer-newsletter {
-            grid-column: 1 / -1;
+            order: 1;
+            margin-bottom: 4vw;
         }
+
+        .footer-company { order: 2; }
+        .footer-features { order: 3; }
+        .footer-contact { order: 4; }
 
         .footer-newsletter label {
             font-size: 2.4648vw;
@@ -230,6 +235,89 @@
 
         .footer-bottom small {
             font-size: 2.4648vw;
+        }
+    }
+    @media (max-width: 767px) {
+        .footer-center-container {
+            margin: 0 6vw;
+            padding: 15vw 0 11.5625vw;
+            min-height: auto;
+            gap: 8vw;
+        }
+
+        .footer-main {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-brand {
+        }
+
+        .footer-logo {
+            font-size: 15.625vw;
+            margin: 0;
+        }
+
+        .footer-logo span {
+            font-size: 16.25vw;
+        }
+
+        .footer-brand p {
+            font-size: 4.375vw;
+            margin-top: 5vw;
+        }
+
+        .footer-company, .footer-features, .footer-contact {
+            margin-right: 0;
+        }
+
+        .footer-column h2, .footer-newsletter h2 {
+            font-size: 7.5vw;
+            margin-bottom: 5vw;
+        }
+
+        .footer-column ul {
+            gap: 3.75vw;
+            padding: 0;
+        }
+
+        .footer-column li {
+            font-size: 4.375vw;
+        }
+
+        .footer-newsletter {
+            font-size: 7.5vw;
+        }
+
+        .footer-newsletter label {
+            font-size: 4.375vw;
+        }
+
+        .footer-text {
+            font-size: 4.375vw;
+            margin-bottom: 3.125vw;
+        }
+
+        .footer-email-control {
+            width: 100%;
+            padding: 3.4375vw 5vw;
+            border-radius: 0.8vw;
+        }
+
+        .footer-email-control input {
+            font-size: 4.375vw;
+        }
+
+        .footer-email-control button {
+            width: 4.875vw;
+            height: 4.875vw;
+        }
+
+        .footer-bottom{
+            margin-top: 37.5vw;
+        }
+        .footer-bottom small {
+            font-size: 4.375vw;
         }
     }
 }
