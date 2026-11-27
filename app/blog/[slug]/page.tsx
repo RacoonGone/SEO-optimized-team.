@@ -4,7 +4,9 @@ import { blogPosts, getBlogPost } from "@/app/data/blog-data";
 import "../blog.css";
 import blogPage from ""
 
-export default async function BlogPostPage() {
+export default async function BlogPostPage({ params }: BlogPageProps) {
+  const { slug } = await params;
+  const post = getBlogPost(slug);
   return <>
     <Navbar />
 

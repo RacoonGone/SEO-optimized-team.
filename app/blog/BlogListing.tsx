@@ -1,7 +1,7 @@
 "use client";
 
 import { blogPosts } from "@/app/data/blog-data";
-
+import Link from "next/link";
 
 export default function BlogListing() {
   return (
@@ -15,7 +15,7 @@ export default function BlogListing() {
               </div>
               <div className="blog-card-grid">
                 {blogPosts.map((post) =>
-                    <div className="blog-card" key={post.slug}>
+                    <Link className="blog-card" href={`/blog/${post.slug}`} key={post.slug}>
                         <img className="blog-image" src={post.image} alt={post.title} />
                         <div className="blog-card-body">
                             <div className="blog-content-container">
@@ -31,7 +31,7 @@ export default function BlogListing() {
                                 </div>
                             </div>
                         </div>
-                    </div>)}
+                    </Link>)}
               </div>
           </div>
         </div>
