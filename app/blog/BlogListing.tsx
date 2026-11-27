@@ -2,6 +2,7 @@
 
 import { blogPosts } from "@/app/data/blog-data";
 import Link from "next/link";
+import "./blog.css"
 
 export default function BlogListing() {
   return (
