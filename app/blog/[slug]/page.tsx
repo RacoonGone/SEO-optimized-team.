@@ -1,16 +1,13 @@
-// to provide metadata for slug pages
-// export async function generateMetadata({ params }: {params: Promise<{slug: string}>}) {
-//   const {slug}:any = await params;
-//   const post = await getPost(slug);
-//   return {
-//     title: post.title,
-//     description: post.excerpt,
-//     alternates: {canonical: `/blog/${slug}`}
-//   }
-// }
+import Navbar from "@/components/navbar/Navbar";
+import Footer from "@/components/footer/Footer";
+import { blogPosts, getBlogPost } from "@/app/data/blog-data";
+import "../blog.css";
+import blogPage from ""
 
-export default function DynamicBlogPage(){
-  return (
-    <div>This is dynamic blog page</div>
-  )
+export default async function BlogPostPage() {
+  return <>
+    <Navbar />
+
+    <Footer />
+  </>;
 }

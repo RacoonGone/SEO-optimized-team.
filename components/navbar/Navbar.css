@@ -16,9 +16,23 @@
 }
 
 .site-header.is-scrolled .navbar-content-container {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(8, 16, 72, 0.3);
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
+}
+
+.site-header:not(.home-page) .navbar, .site-header:not(.home-page) .navbar-logo, .site-header:not(.home-page) .navbar-links a, .site-header:not(.home-page) .navbar-cta span, .site-header:not(.home-page) .m-nav-menu a {
+    color: #232340;
+    text-shadow: none;
+}
+.site-header:not(.home-page) .navbar-logo span {
+    color: #5468e7;
+}
+.site-header:not(.home-page) .m-nav-menu {
+    background-color: #f5f5f5;
+}
+.site-header:not(.home-page) .navbar-content-container {
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .navbar-center-container {
@@ -96,7 +110,7 @@
 }
 .m-nav-menu {
     display: none;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(8, 16, 72, 0.5);
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
     position: absolute;
@@ -110,6 +124,9 @@
     transform: scale(.94);
     align-items: center;
     transition: top 0.5s ease, width 0.5s ease;
+}
+.site-header:not(.home-page) .m-nav-menu {
+    background-color: rgb(255 255 255 / 0.7);
 }
 
 @media (max-width: 1199px) {

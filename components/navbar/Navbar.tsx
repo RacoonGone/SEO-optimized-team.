@@ -4,17 +4,20 @@ import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { usePathname } from "next/navigation";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP)
 
 const links = [
-    { label: 'Product', href: '#product' },
-    { label: 'Blog', href: '#blog' },
-    { label: 'Support', href: '#support' },
-    { label: 'Log In', href: '#login' },
+    { label: 'Product', href: 'product' },
+    { label: 'Blog', href: 'blog' },
+    { label: 'Support', href: 'support' },
+    { label: 'Log In', href: 'login' },
 ];
 
 export default function Navbar() {
+    const pathname = usePathname();
+    const isHomePage = pathname === "/" || pathname === "/home";
     const navbarRef = useRef<HTMLDivElement>(null);
     const [open, setOpen] = useState(false);
     const menuOpenRef = useRef(open);
@@ -79,7 +82,7 @@ export default function Navbar() {
         });
     }, { dependencies: [] });
     return (
-        <header className="site-header" ref={navbarRef}>
+        <header className={`site-header${isHomePage ? " home-page" : ""}`} ref={navbarRef}>
             <div className={`content-container navbar-content-container${open ? " menu-open" : ""}`}>
                 <div className="center-container navbar-center-container">
                     <nav className={open ? "navbar menu-open" : "navbar"} aria-label="Main navigation">
@@ -96,7 +99,7 @@ export default function Navbar() {
                             <div className="navbar-cta"><span>Get Access</span></div>
                         </div>
                         <div className="m-nav-button" onClick={() => setOpen(!open)}>
-                            <img className="m-nav-button-image" src="/menu-button.png"/>
+                            <img className="m-nav-button-image" src={isHomePage ? "/menu-button.png" : "/menu-button-black.png"} alt="Open menu"/>
                         </div>
                         <div className={open ? "m-nav-menu open" : "m-nav-menu"}>
                             {links.map((link) => (

@@ -164,8 +164,9 @@
             row-gap: 8vw;
         }
 
-        .footer-brand {
-            order: 0;
+        .footer-brand,
+        .footer-newsletter {
+            grid-column: 1 / -1;
         }
 
         .footer-logo {
@@ -201,13 +202,8 @@
         }
 
         .footer-newsletter {
-            order: 1;
             margin-bottom: 4vw;
         }
-
-        .footer-company { order: 2; }
-        .footer-features { order: 3; }
-        .footer-contact { order: 4; }
 
         .footer-newsletter label {
             font-size: 2.4648vw;
@@ -248,10 +244,13 @@
         .footer-main {
             display: flex;
             flex-direction: column;
+            gap: 8vw;
         }
 
-        .footer-brand {
-        }
+        .footer-newsletter { order: 1; }
+        .footer-company { order: 2; }
+        .footer-features { order: 3; }
+        .footer-contact { order: 4; }
 
         .footer-logo {
             font-size: 15.625vw;
